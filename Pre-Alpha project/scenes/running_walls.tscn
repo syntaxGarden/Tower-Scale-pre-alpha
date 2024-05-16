@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://dlxo4avpnsbf"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_ra1g0"]
+
+[node name="running_walls" type="Area3D"]
+editor_description = "The concept of runnable walls was later adapted into the jumpable walls and the grind rails"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("ConvexPolygonShape3D_ra1g0")

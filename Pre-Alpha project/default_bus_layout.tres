@@ -1,0 +1,19 @@
+[gd_resource type="AudioBusLayout" load_steps=2 format=3 uid="uid://dqk3blf7myjoj"]
+
+[sub_resource type="AudioEffectReverb" id="AudioEffectReverb_k0i7m"]
+resource_name = "Reverb"
+room_size = 0.44
+damping = 0.0
+spread = 0.23
+dry = 0.49
+wet = 0.05
+
+[resource]
+bus/1/name = &"Gun sounds"
+bus/1/solo = false
+bus/1/mute = false
+bus/1/bypass_fx = false
+bus/1/volume_db = 0.0
+bus/1/send = &"Master"
+bus/1/effect/0/effect = SubResource("AudioEffectReverb_k0i7m")
+bus/1/effect/0/enabled = false
