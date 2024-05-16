@@ -1,6 +1,6 @@
 # Tower-Scale-pre-alpha
 
-[Demonstration video](https://github.com/syntaxGarden/Tower-Scale-pre-alpha/blob/main/Tower%20Scale%20demonstration.mp4)
+https://github.com/syntaxGarden/Tower-Scale-pre-alpha/blob/main/Tower%20Scale%20demonstration.mp4
 
 This is the first pre-alpha version of Tower Scale, a game by Syntax Garden Studios. This version of the game features:
   ~~Full player movement, including normal walking, jumping, and dodging.
