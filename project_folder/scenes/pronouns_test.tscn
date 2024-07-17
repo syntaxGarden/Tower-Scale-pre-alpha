@@ -1,0 +1,45 @@
+[gd_scene load_steps=2 format=3 uid="uid://2fsqrgjpysri"]
+
+[ext_resource type="Script" path="res://scripts/pronouns_test.cs" id="1_0y3kw"]
+
+[node name="pronouns_test" type="Node2D"]
+script = ExtResource("1_0y3kw")
+
+[node name="speech" type="Label" parent="."]
+offset_left = 85.0
+offset_top = 33.0
+offset_right = 1066.0
+offset_bottom = 386.0
+theme_override_font_sizes/font_size = 24
+text = "Boss dialogue examples: "
+autowrap_mode = 2
+
+[node name="pronoun_list" type="ItemList" parent="."]
+offset_left = 249.0
+offset_top = 435.0
+offset_right = 564.0
+offset_bottom = 524.0
+scale = Vector2(2, 2)
+item_count = 9
+max_columns = 3
+same_column_width = true
+item_0/text = "he/him"
+item_1/text = "she/her"
+item_2/text = "they/them"
+item_3/text = "it/its"
+item_4/text = "ve/ver"
+item_5/text = "xe/xem"
+item_6/text = "ey/em"
+item_7/text = "He/Him"
+item_8/text = "shkle/shkler"
+
+[node name="Button" type="Button" parent="."]
+offset_left = 1034.0
+offset_top = 569.0
+offset_right = 1071.0
+offset_bottom = 600.0
+scale = Vector2(1.48, 1.4874)
+text = "exit"
+
+[connection signal="item_selected" from="pronoun_list" to="." method="OnPronounListItemSelected"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

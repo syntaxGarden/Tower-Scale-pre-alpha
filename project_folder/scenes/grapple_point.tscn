@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=3 uid="uid://b3jxiph4cj42e"]
+
+[ext_resource type="Texture2D" uid="uid://bdl2bma3edd21" path="res://icon.svg" id="1_48ob6"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_o666o"]
+radius = 2.5
+
+[sub_resource type="SphereMesh" id="SphereMesh_bb8gy"]
+radius = 1.5
+height = 3.0
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_xt4sn"]
+radius = 1.5
+
+[node name="grapple_point" type="Area3D"]
+editor_description = "grapple"
+collision_layer = 2
+collision_mask = 2
+monitoring = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_o666o")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
+modulate = Color(0.254902, 0, 0, 1)
+billboard = 1
+texture = ExtResource("1_48ob6")
+
+[node name="mesh" type="MeshInstance3D" parent="."]
+mesh = SubResource("SphereMesh_bb8gy")
+skeleton = NodePath("")
+
+[node name="physical_point" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="physical_point"]
+shape = SubResource("SphereShape3D_xt4sn")

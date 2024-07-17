@@ -1,0 +1,57 @@
+[gd_scene load_steps=2 format=3 uid="uid://bwyt0lfpujpr0"]
+
+[ext_resource type="Script" path="res://scripts/control_menu.cs" id="1_ycn08"]
+
+[node name="control_menu" type="Node2D"]
+script = ExtResource("1_ycn08")
+
+[node name="bg" type="Sprite2D" parent="."]
+
+[node name="exit" type="Button" parent="."]
+offset_left = 1275.0
+offset_top = 10.0
+offset_right = 1312.0
+offset_bottom = 41.0
+scale = Vector2(2, 2)
+text = "Exit"
+
+[node name="title" type="RichTextLabel" parent="."]
+offset_left = 458.0
+offset_top = 10.0
+offset_right = 960.0
+offset_bottom = 80.0
+theme_override_font_sizes/normal_font_size = 48
+text = "Control Remap Menu"
+
+[node name="action0" type="Node2D" parent="."]
+position = Vector2(40, 99)
+
+[node name="name" type="Label" parent="action0"]
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_font_sizes/font_size = 27
+text = "Action"
+
+[node name="red" type="ColorRect" parent="action0"]
+visible = false
+offset_left = 245.0
+offset_right = 382.0
+offset_bottom = 41.0
+color = Color(0.733333, 0, 0, 0.54902)
+
+[node name="keycode" type="Button" parent="action0"]
+offset_left = 241.0
+offset_top = -2.0
+offset_right = 381.0
+offset_bottom = 43.0
+theme_override_font_sizes/font_size = 27
+text = "key"
+
+[node name="clear" type="Button" parent="action0"]
+offset_left = 404.0
+offset_top = 4.0
+offset_right = 433.0
+offset_bottom = 35.0
+text = "X"
+
+[connection signal="pressed" from="exit" to="." method="OnExitPressed"]
